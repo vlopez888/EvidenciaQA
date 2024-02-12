@@ -1,0 +1,21 @@
+Y para que lo tengas en cuenta el PC de Bancolombia (B0810386) que estamos usando para la certificación, tiene los siguientes datos:
+
+
+
+hostname: db0b0810386
+
+ip:10.8.227.2
+
+tarejta:
+5306917370941432
+
+cc
+1989687676
+
+
+foreach ($pdfFile in $pdfFiles) { $destinationPath = Join-Path -Path $destinationFolder -ChildPath $pdfFile.Name Copy-Item -Path $pdfFile.FullName Destination $destinationPath -Force Write-Host "Copied $($pdfFile.Name) to $($destinationPath)" }
+
+
+foreach ($pdf in $pdfs) { Copy-Item -Path $pdf.FullName -Destination $($destinationPath) }
+
+$destinationPath = Join-Path -Path $destinationFolder -ChildPath $pdfFile.Name Copy-Item -Path $pdfFile.FullName -Destination $destinationPath -Force Write-Host "PDF file $($pdfFile.Name) copied successfully to $($destinationPath)."
